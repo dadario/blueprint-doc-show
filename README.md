@@ -1,7 +1,10 @@
 BluePrint doc show
 ===
 
-Interface simples para chamada de arquivos Markdown e formatação usando Aglio
+Interface simples para chamada de urls que retornam arquivos Markdown e processa a formatação usando o tema padrão da biblioteca Aglio
+
+## Dependência
+Esse projeto depende de node.js e demais bibliotecas indicadas no package.json
 
 ## Utilização
 Executar o comando
