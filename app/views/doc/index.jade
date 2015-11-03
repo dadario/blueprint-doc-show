@@ -1,0 +1,24 @@
+html
+  head
+    title Apresentação de Markdown em BluePrint
+    link(rel='icon' type='image/png' href='favicon.ico')
+    link(rel='stylesheet', href='/stylesheets/vendors/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.scss')
+  body
+    div(class='container-fluid')
+      div(class='span12' id='title-bar')
+        h3 Indique a URL do arquivo de Markdown para ser apresentada
+        form(class='form-inline' id='form-exibir-url')
+          div(class='form-group')
+            label(for='url') URL
+            input(type='text' class='form-control' id='url' name='url' placeholder='http://localhost/api-doc.md')
+          button(type='button' class='btn btn-default' id='exibir') Exibir      
+      
+      div(class='row-fluid')
+        div(class='span12')
+          iframe(id='show-bar' src='/doc')
+          
+    script(type='text/javascript' src='/javascripts/vendors/jquery-1.11.3.min.js')
+    script(type='text/javascript' src='/javascripts/vendors/bootstrap.min.js')
+    script(type='text/javascript' src='/javascripts/application.js')
+    
