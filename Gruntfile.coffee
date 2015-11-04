@@ -5,6 +5,8 @@ module.exports = (grunt) ->
         NODE_ENV: 'development'
       test:
         NODE_ENV: 'test'
+      prod:
+        NODE_ENV: 'production'
     coffeelint:
         app: ['app/**/*.coffee', 'config/**/*.coffee']
         tests: ['tests/**/*.coffee']
@@ -39,6 +41,10 @@ module.exports = (grunt) ->
         tasks: ['nodemon', 'watch']
         options:
           logConcurrentOutput: true
+      prod:
+        tasks: ['nodemon']
+        options:
+          logConcurrentOutput: false
     react:
       dynamic_mappings:
         files: [{

@@ -1,5 +1,5 @@
 {
-  "name": "BluePrint-doc-show",
+  "name": "blueprint-doc-show",
   "description": "Gateway para formação de documentação gerada pelo MD de BluePrint",
   "homepage": "htts://bitbucket.com/vagas/blueprint-doc-show",
   "author": "Adriano Dadario <dadario@gmail.com>",
@@ -16,11 +16,7 @@
     "jade": "^1.1.0",
     "express-compile-sass": "^3.0.4",
     "aglio": "^2.0.4"
-  },
-  "version": "0.1.0",
-  "main": "server.coffee",
-  "devDependencies": {
-    "coffeelint": "^1.10.1",
+    "node-sass": "^3.4.1"
     "grunt": "^0.4.5",
     "grunt-coffeelint": "0.0.13",
     "grunt-concurrent": "^2.0.0",
@@ -30,6 +26,11 @@
     "grunt-nodemon": "^0.4.0",
     "grunt-mocha-test": "^0.12.7",
     "grunt-react": "^0.12.2",
+  },
+  "version": "0.1.0",
+  "main": "server.coffee",
+  "devDependencies": {
+    "coffeelint": "^1.10.1",
     "mocha": "^2.2.5",
     "should": "^7.0.0",
     "supertest": "^1.0.1",
