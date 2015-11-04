@@ -24,6 +24,11 @@ module.exports = (grunt) ->
         options:
           ext: 'js,coffee'
           debug: true
+      prod:
+        script: 'server.coffee'
+        options:
+          ext: 'js,coffee'
+          debug: false
     watch:
       application:
         files: ['app/**/*.coffee', 'config/**/*.coffee', 'tests/**/*.coffee']
