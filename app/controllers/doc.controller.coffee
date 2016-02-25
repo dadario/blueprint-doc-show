@@ -9,11 +9,15 @@ exports.doc = (request, response, next) ->
   if request.query.url == undefined
     response.render('doc/no-doc', pretty: true)
   else
-    aglio_options = {
-      themeVariables: 'default'
-    }
 
     url_parsed = url.parse(request.query.url)
+
+    aglio_options = {
+      themeVariables: 'default',
+      themeFullWidth: true,
+      includeHost: "http://#{url_parsed.hostname}:#{url_parsed.port}"
+    }
+
     opcoes = {
       hostname: url_parsed.hostname,
       port: url_parsed.port,
