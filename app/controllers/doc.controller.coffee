@@ -33,10 +33,18 @@ exports.doc = (request, response, next) ->
       resp.on 'data', (data) ->
         documento += data
       resp.on 'end', ->
+        console.log documento
+
         aglio.render documento, aglio_options, (err_aglio, html, warnings) ->
-          next(err_aglio) if (err_aglio)
-          console.log 'Renderizando aglio'
+          console.log '========================='
+          console.log warnings
+          console.log '-------------------------'
+          console.log err_aglio
+          console.log '========================='
+
+          next(err_aglio) unless err_aglio == null
           response.send html
+
     ).on('error', (error) ->
       response.render('doc/no-doc', {error: error.message})
     )
