@@ -12,10 +12,13 @@ exports.doc = (request, response, next) ->
 
     url_parsed = url.parse(request.query.url)
 
+    includeHost = "http://#{url_parsed.hostname}"
+    includeHost = "#{includeHost}:#{url_parsed.port}" if url_parsed.port
+
     aglio_options = {
       themeVariables: 'default',
       themeFullWidth: true,
-      includeHost: "http://#{url_parsed.hostname}:#{url_parsed.port}"
+      includeHost: includeHost
     }
 
     opcoes = {

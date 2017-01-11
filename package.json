@@ -15,7 +15,7 @@
     "express": "^4.12.4",
     "jade": "^1.1.0",
     "express-compile-sass": "^3.0.4",
-    "aglio": "^2.0.4",
+    "aglio": "2.2.0-vagas",
     "node-sass": "^3.4.1",
     "grunt": "^0.4.5",
     "grunt-coffeelint": "0.0.13",

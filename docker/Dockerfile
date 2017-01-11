@@ -6,7 +6,8 @@ RUN apt-get update && \
     apt-get clean
 RUN git clone https://github.com/dadario/blueprint-doc-show.git apps/blueprint-doc-show
 RUN npm install -g grunt grunt-cli coffee-script protagonist aglio
-ENV NODE_ENV=prod
+ENV NODE_ENV=production
 WORKDIR apps/blueprint-doc-show
+RUN npm install
 EXPOSE 3030
-ENTRYPOINT git pull origin master && npm install && grunt
+ENTRYPOINT grunt
